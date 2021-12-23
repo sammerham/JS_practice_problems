@@ -10,6 +10,6 @@ const maxSubArrSum = (arr, n) => {
     tempSum = (tempSum - arr[j - n]) + arr[j];
     maxSum = Math.max(tempSum, maxSum);
   }
-  return maxSum
+  return maxSum;
 }
 console.log(maxSubArrSum(arr, 2))
