@@ -37,10 +37,10 @@ const longestPalindromicSubstring = str => {
   let longest = '';
   for (let i = 0; i < str.length; i++) {
     let oddPalindrom = expandFromCenter(str, i, i);
-    let evenPalindrom = expandFromCenter(str, i, i + 1);
+    let evenPalindrome = expandFromCenter(str, i, i + 1);
 
     if (oddPalindrom.length > longest.length) longest = oddPalindrom;
-    if (evenPalindrom.length > longest.length) longest = evenPalindrom;
+    if (evenPalindrome.length > longest.length) longest = evenPalindrome;
   }
   return longest;
 }
