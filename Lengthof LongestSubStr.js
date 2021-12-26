@@ -5,12 +5,14 @@ const lengthOfLongestSubst = str => {
   if (str.length === 0) return 0;
   if (str.length === 1) return 1;
   let count = 0;
+  let tempStr = '';
+  let longestStr = '';
   // make two pointers for window;
-    // start of window
+    // start idx of window
   let i = 0;
-    // end of window
+    // end idx of window
   let j = 0;
-  // make new set to save seen or visited chars
+  // make new set to save seen or visited chars as my WINDOW
   let set = new Set();
   let len = str.length;
   // iterate over given str
