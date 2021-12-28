@@ -21,14 +21,21 @@ const zigzag = arr => {
     tempWindow.push(arr[i]);
   }
   checkZigZag(...tempWindow) ? results.push(1) : results.push(0);
+
   for (let j = 3; j < arr.length; j++){
- 
-    tempWindow = arr.slice( j - 3 + 1, j + 1);
-  checkZigZag(...tempWindow) ? results.push(1) : results.push(0);
+    // tempWindow = arr.slice( j - 3 + 1, j + 1);
+    // tempWindow = tempWindow.slice(1).concat(arr[j]);
+    tempWindow = [...tempWindow.slice(1), arr[j]];
+    // tempWindow = [tempWindow[1], tempWindow[2], arr[j]]
+    console.log('window', tempWindow)
+    checkZigZag(...tempWindow) ? results.push(1) : results.push(0);
   }
+
   return results
 }
-                      //j3
-let numbers = [1, 2, 3, 4]; //121  = 213 = 134 
+                //j3
+let numbers = [1, 2,1, 3, 4]; //121  = 213 = 134 
                             
 console.log(zigzag(numbers))
+
+
