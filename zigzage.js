@@ -20,26 +20,15 @@ const zigzag = arr => {
   for (let i = 0; i < 3; i++) {
     tempWindow.push(arr[i]);
   }
-
-  if (checkZigZag(...tempWindow)) { 
-    results.push(1);
-  } else {
-    results.push(0)
-  }
+  checkZigZag(...tempWindow) ? results.push(1) : results.push(0);
   for (let j = 3; j < arr.length; j++){
  
     tempWindow = arr.slice( j - 3 + 1, j + 1);
-  
-    if (checkZigZag(...tempWindow)) {
-      results.push(1);
-    } else {
-      results.push(0)
-    }
-
+  checkZigZag(...tempWindow) ? results.push(1) : results.push(0);
   }
   return results
 }
                       //j3
-let numbers = [1, 2, 1, 3, 4]; //121  = 213 = 134 
+let numbers = [1, 2, 3, 4]; //121  = 213 = 134 
                             
 console.log(zigzag(numbers))
