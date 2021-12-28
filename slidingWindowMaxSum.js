@@ -7,6 +7,7 @@ const maxSubArrSum = (arr, n) => {
     tempSum += arr[i];
   }
   for (let j = n; j < arr.length; j++) {
+    
     tempSum = (tempSum - arr[j - n]) + arr[j];
     maxSum = Math.max(tempSum, maxSum);
   }

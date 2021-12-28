@@ -8,7 +8,7 @@ two different indicies i < j. such that a[i] + a[j] is divisable by k
  
 const divisibleBy = (arr, k) => {
   // initiate counter
-  let count = 0;
+  let count = 0;     
   // start a freq counter for mod of every num oin given arr;
   const freqCounter = {}
 
