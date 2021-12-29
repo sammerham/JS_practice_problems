@@ -27,15 +27,15 @@ const zigzag = arr => {
     // tempWindow = tempWindow.slice(1).concat(arr[j]);
     tempWindow = [...tempWindow.slice(1), arr[j]];
     // tempWindow = [tempWindow[1], tempWindow[2], arr[j]]
-    console.log('window', tempWindow)
     checkZigZag(...tempWindow) ? results.push(1) : results.push(0);
   }
 
   return results
 }
-                //j3
-let numbers = [1, 2,1, 3, 4]; //121  = 213 = 134 
                             
-console.log(zigzag(numbers))
+console.log(zigzag([1, 2, 1, 3, 4]))
+console.log(zigzag([1, 2, 3, 4]))
+console.log(zigzag([1000000000, 1000000000, 1000000000]))
+
 
 
