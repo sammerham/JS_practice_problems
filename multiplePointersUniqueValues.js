@@ -8,7 +8,10 @@ function countUniqueValues(arr) {
       arr[i] = arr[j];
     }
   }
-  return i + 1;
+  // return i + 1;
+  return arr
+
  }
-//o(n)
+//o(n)                           1i           1j
 console.log(countUniqueValues([1, 1, 1, 1, 1, 2]))
+console.log(countUniqueValues([1, 1, 2]))
